@@ -6,13 +6,15 @@
 
 #### The app receives a set of n images of 28x28 pixels as a matrix of shape (n x 784)
 
-#### Build an image of a docker container:
+#### Clone repository and build an image of a docker container:
 ```sh
+git clone https://github.com/vladgerasimov/ml_in_buisiness.git
+cd ml_in_buisiness
 docker build -t digits_net .
 ```
 #### Run container:
 ```sh
-docker run -d -p 8181:8181 -v <path_to_your_models_dir>:/app/app/models digits_net
+docker run -d -p 8181:8181 -v app/models:/app/app/models digits_net
 ```
 
 
